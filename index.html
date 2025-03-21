@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube" id="cube">
+            <div class="cube-face front">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="cube-face back">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="cube-face left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="cube-face right">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="cube-face top">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="cube-face bottom">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="controls">
+            <button class="order-1" onclick="F()">F</button>
+            <button class="order-2" onclick="R()">R</button>
+            <button class="order-3" onclick="U()">U</button>
+            <button class="order-4" onclick="L()">L</button>
+            <button class="order-5" onclick="B()">B</button>
+            <button class="order-6" onclick="D()">D</button>
+            <button class="order-7" onclick="M()">M</button>
+            <button class="order-8" onclick="E()">E</button>
+            <button class="order-9" onclick="S()">S</button>
+
+            <button class="order-10" onclick="FPrime()">F'</button>
+            <button class="order-11" onclick="RPrime()">R'</button>
+            <button class="order-12" onclick="UPrime()">U'</button>
+            <button class="order-13" onclick="LPrime()">L'</button>
+            <button class="order-14" onclick="BPrime()">B'</button>
+            <button class="order-15" onclick="DPrime()">D'</button>
+            <button class="order-16" onclick="MPrime()">M'</button>
+            <button class="order-17" onclick="EPrime()">E'</button>
+            <button class="order-18" onclick="SPrime()">S'</button>
+
+            <button class="wide order-19" onclick="rotateLeft()">←</button>
+            <button class="wide order-20" onclick="rotateUp()">↑</button>
+            <button class="order-21" onclick="info()">?</button>
+            <button class="wide order-22" onclick="rotateDown()">↓</button>
+            <button class="wide order-23" onclick="rotateRight()">→</button>
+
+            <button class="wide order-24" onclick="solve()">Solve</button>
+            <button class="wide order-25" onclick="scramble()">Scramble</button>
+            <button class="order-26" onclick="angle(0, 0)">0°</button>
+            <button class="wide order-27" onclick="angle(-20, -20)">20°</button>
+            <button class="wide order-28" onclick="angle(-30, -45)">45°</button>
+        </div>
+        <p>
+            You can use keyboard letters to make turns, Shift
+            + letter for counterclockwise moves, and arrow keys for rotation.
+        </p>
+    </div>
+    <script src="cube.js"></script>
+</body>
+
+
+</html>

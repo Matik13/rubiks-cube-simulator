@@ -1,0 +1,213 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #2c3e50;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.cube {
+	position: relative;
+	width: 210px;
+	height: 210px;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) rotateY(0deg);
+	margin-top: 100px;
+}
+
+.cube-face {
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	display: grid;
+	grid-template-columns: repeat(3, 70px);
+	grid-template-rows: repeat(3, 70px);
+	backface-visibility: hidden;
+	transition: transform 1s ease-in-out;
+}
+
+.cube-face div {
+	width: 69px;
+	height: 69px;
+	border: 1px solid #000;
+	background-size: 210px 210px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.front {
+	transform: rotateY(0deg) translateZ(105px);
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(105px);
+}
+
+.left {
+	transform: rotateY(-90deg) translateZ(105px);
+}
+
+.right {
+	transform: rotateY(90deg) translateZ(105px);
+}
+
+.top {
+	transform: rotateX(90deg) translateZ(105px);
+}
+
+.bottom {
+	transform: rotateX(-90deg) translateZ(105px);
+}
+
+#controls {
+	display: grid;
+	grid-template-columns: repeat(9, auto);
+	gap: 10px;
+	justify-content: center;
+	margin-top: 150px;
+}
+
+.wide {
+	grid-column: span 2;
+	justify-self: center;
+	width: 100%;
+}
+
+button {
+	padding: 10px 15px;
+	font-size: 14px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: #3498db;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #2980b9;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+p {
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+@media (max-width: 500px) {
+	#controls {
+		grid-template-columns: repeat(6, auto);
+		gap: 5px;
+		margin-top: 70px;
+	}
+
+	button {
+		padding: 8px 10px;
+		font-size: 12px;
+	}
+
+	.wide {
+		grid-column: span 2;
+	}
+
+	.order-1 {
+		order: 1;
+	} /* F */
+	.order-2 {
+		order: 2;
+	} /* R */
+	.order-3 {
+		order: 3;
+	} /* U */
+	.order-4 {
+		order: 4;
+	} /* L */
+	.order-5 {
+		order: 5;
+	} /* B */
+	.order-6 {
+		order: 6;
+	} /* D */
+	.order-10 {
+		order: 7;
+	} /* F' */
+	.order-11 {
+		order: 8;
+	} /* R' */
+	.order-12 {
+		order: 9;
+	} /* U' */
+	.order-13 {
+		order: 10;
+	} /* L' */
+	.order-14 {
+		order: 11;
+	} /* B' */
+	.order-15 {
+		order: 12;
+	} /* D' */
+	.order-7 {
+		order: 13;
+	} /* M */
+	.order-8 {
+		order: 14;
+	} /* E */
+	.order-9 {
+		order: 15;
+	} /* S */
+	.order-16 {
+		order: 16;
+	} /* M' */
+	.order-17 {
+		order: 17;
+	} /* E' */
+	.order-18 {
+		order: 18;
+	} /* S' */
+	.order-24 {
+		order: 19;
+	} /* Solve */
+	.order-20 {
+		order: 20;
+	} /* ↑ */
+	.order-25 {
+		order: 21;
+	} /* Scramble */
+	.order-19 {
+		order: 22;
+	} /* ← */
+	.order-22 {
+		order: 23;
+	} /* ↓ */
+	.order-23 {
+		order: 24;
+	} /* → */
+	.order-21 {
+		order: 25;
+	} /* ? */
+	.order-26 {
+		order: 26;
+	} /* 0° */
+	.order-27 {
+		order: 27;
+	} /* 20° */
+	.order-28 {
+		order: 28;
+	} /* 45° */
+	p {
+		display: none;
+	}
+}
