@@ -15,7 +15,7 @@ This project is a 3D Rubik's Cube simulator built using HTML, CSS, and JavaScrip
 
 ## Demo
 
-[Rubik's Cube Simulator]()
+[Rubik's Cube Simulator](https://matik13.github.io/rubiks-cube-simulator/)
 
 ## Usage
 
