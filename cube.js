@@ -4,46 +4,48 @@ let currentY = -45
 rotateCube(currentX, currentY)
 
 function getDefaultCubeState() {
+	frontColor = 'green'
+	backColor = 'blue'
+	leftColor = 'orange'
+	rightColor = 'red'
+	topColor = 'white'
+	bottomColor = 'yellow'
+	// you can use image instead of color
+	// frontColor = 'url("image.png")'
 	return {
 		front: [
-			['green', 'green', 'green'],
-			['green', 'green', 'green'],
-			['green', 'green', 'green'],
+			[frontColor, frontColor, frontColor],
+			[frontColor, frontColor, frontColor],
+			[frontColor, frontColor, frontColor],
 		],
-
-		// if you want to use images instead of colors:
-		// front: [
-		//     ['url("front.jpg")', 'url("front.jpg")', 'url("front.jpg")'],
-		//     ['url("front.jpg")', 'url("front.jpg")', 'url("front.jpg")'],
-		//     ['url("front.jpg")', 'url("front.jpg")', 'url("front.jpg")']
-		// ],
 		back: [
-			['blue', 'blue', 'blue'],
-			['blue', 'blue', 'blue'],
-			['blue', 'blue', 'blue'],
+			[backColor, backColor, backColor],
+			[backColor, backColor, backColor],
+			[backColor, backColor, backColor],
 		],
 		left: [
-			['orange', 'orange', 'orange'],
-			['orange', 'orange', 'orange'],
-			['orange', 'orange', 'orange'],
+			[leftColor, leftColor, leftColor],
+			[leftColor, leftColor, leftColor],
+			[leftColor, leftColor, leftColor],
 		],
 		right: [
-			['red', 'red', 'red'],
-			['red', 'red', 'red'],
-			['red', 'red', 'red'],
+			[rightColor, rightColor, rightColor],
+			[rightColor, rightColor, rightColor],
+			[rightColor, rightColor, rightColor],
 		],
 		top: [
-			['white', 'white', 'white'],
-			['white', 'white', 'white'],
-			['white', 'white', 'white'],
+			[topColor, topColor, topColor],
+			[topColor, topColor, topColor],
+			[topColor, topColor, topColor],
 		],
 		bottom: [
-			['yellow', 'yellow', 'yellow'],
-			['yellow', 'yellow', 'yellow'],
-			['yellow', 'yellow', 'yellow'],
+			[bottomColor, bottomColor, bottomColor],
+			[bottomColor, bottomColor, bottomColor],
+			[bottomColor, bottomColor, bottomColor],
 		],
 	}
 }
+
 
 cubeState = getDefaultCubeState()
 
