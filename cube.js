@@ -180,7 +180,7 @@ function B() {
 	cubeState.top[0] = cubeState.right.map(row => row[2])
 	cubeState.right.forEach((row, i) => (row[2] = cubeState.bottom[2][2 - i]))
 	cubeState.bottom[2] = cubeState.left.map(row => row[0]).reverse()
-	cubeState.left.forEach((row, i) => (row[0] = temp[2 - i]))
+	cubeState.left.forEach((row, i) => (row[0] = temp[i]))
 	updateCubeVisuals()
 }
 
